@@ -5,36 +5,36 @@ import 'package:flutter/scheduler.dart';
 class LiquidMetalShaderController {
   LiquidMetalShaderController.withDefaults({
     required TickerProvider vsync,
-  })  : dispersion = LiquidMetalShaderEditableParameter(
-          minValue: 0,
-          maxValue: 0.06,
-          defaultValue: 0.015,
-        ),
-        edge = LiquidMetalShaderEditableParameter(
-          minValue: 0,
-          maxValue: 1,
-          defaultValue: 0.4,
-        ),
-        patternBlur = LiquidMetalShaderEditableParameter(
-          minValue: 0,
-          maxValue: 0.05,
-          defaultValue: 0.005,
-        ),
-        liquid = LiquidMetalShaderEditableParameter(
-          minValue: 0,
-          maxValue: 1,
-          defaultValue: 0.07,
-        ),
-        patternScale = LiquidMetalShaderEditableParameter(
-          minValue: 1,
-          maxValue: 10,
-          defaultValue: 2,
-        ),
-        time = LiquidMetalShaderParameter(
-          minValue: 0,
-          maxValue: double.infinity,
-          defaultValue: 0,
-        ) {
+  }) : dispersion = LiquidMetalShaderEditableParameter(
+         minValue: 0,
+         maxValue: 0.06,
+         defaultValue: 0.015,
+       ),
+       edge = LiquidMetalShaderEditableParameter(
+         minValue: 0,
+         maxValue: 1,
+         defaultValue: 0.4,
+       ),
+       patternBlur = LiquidMetalShaderEditableParameter(
+         minValue: 0,
+         maxValue: 0.05,
+         defaultValue: 0.005,
+       ),
+       liquid = LiquidMetalShaderEditableParameter(
+         minValue: 0,
+         maxValue: 1,
+         defaultValue: 0.07,
+       ),
+       patternScale = LiquidMetalShaderEditableParameter(
+         minValue: 1,
+         maxValue: 10,
+         defaultValue: 2,
+       ),
+       time = LiquidMetalShaderParameter(
+         minValue: 0,
+         maxValue: double.infinity,
+         defaultValue: 0,
+       ) {
     speed = LiquidMetalShaderEditableParameter(
       minValue: 0,
       maxValue: 1,
@@ -64,14 +64,14 @@ class LiquidMetalShaderController {
   var _elapsedMilliseconds = 0;
 
   List<ValueListenable<double>> get parameters => [
-        dispersion,
-        edge,
-        patternBlur,
-        liquid,
-        speed,
-        patternScale,
-        time,
-      ];
+    dispersion,
+    edge,
+    patternBlur,
+    liquid,
+    speed,
+    patternScale,
+    time,
+  ];
 
   void dispose() {
     dispersion.dispose();
@@ -117,11 +117,11 @@ class LiquidMetalShaderParameter implements ValueListenable<double> {
     required this.minValue,
     required this.maxValue,
     required double defaultValue,
-  })  : assert(
-          defaultValue >= minValue && defaultValue <= maxValue,
-          'value is not in the allowed range',
-        ),
-        _value = ValueNotifier(defaultValue);
+  }) : assert(
+         defaultValue >= minValue && defaultValue <= maxValue,
+         'value is not in the allowed range',
+       ),
+       _value = ValueNotifier(defaultValue);
 
   final double minValue;
 

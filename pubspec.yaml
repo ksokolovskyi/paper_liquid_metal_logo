@@ -1,23 +1,23 @@
 name: paper_liquid_metal_logo
 description: Paper Liquid Metal Logo
-publish_to: 'none'
+publish_to: none
 version: 1.0.0
 
 environment:
-  sdk: '>=3.6.0 <4.0.0'
+  sdk: ^3.9.2
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_shaders: ^0.1.3
-  provider: ^6.1.2
-  vector_graphics: ^1.1.18
+  provider: ^6.1.5
+  vector_graphics: ^1.1.19
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  vector_graphics_compiler: ^1.1.16
-  very_good_analysis: ^7.0.0
+  vector_graphics_compiler: ^1.1.19
+  very_good_analysis: ^10.0.0
 
 flutter:
   uses-material-design: true

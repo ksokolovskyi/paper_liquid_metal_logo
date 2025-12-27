@@ -53,8 +53,8 @@ class Screen extends StatefulWidget {
 }
 
 class _ScreenState extends State<Screen> with SingleTickerProviderStateMixin {
-  final _logoKey = GlobalKey();
-  final _panelKey = GlobalKey();
+  final GlobalKey<State<StatefulWidget>> _logoKey = GlobalKey();
+  final GlobalKey<State<StatefulWidget>> _panelKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {

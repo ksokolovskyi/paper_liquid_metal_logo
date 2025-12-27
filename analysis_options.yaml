@@ -1,5 +1,12 @@
 include: package:very_good_analysis/analysis_options.yaml
 
+formatter:
+  trailing_commas: preserve
+
 linter:
   rules:
     public_member_api_docs: false
+
+analyzer:
+  errors:
+    discarded_futures: ignore

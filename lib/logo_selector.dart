@@ -80,11 +80,12 @@ class __ItemState extends State<_Item> with SingleTickerProviderStateMixin {
     duration: const Duration(milliseconds: 250),
   );
 
-  late final _logoOpacity = Tween<double>(begin: 0.4, end: 1)
-      .chain(CurveTween(curve: Curves.easeInOut))
-      .animate(_controller);
+  late final Animation<double> _logoOpacity = Tween<double>(
+    begin: 0.4,
+    end: 1,
+  ).chain(CurveTween(curve: Curves.easeInOut)).animate(_controller);
 
-  late final _borderColor = ColorTween(
+  late final Animation<Color?> _borderColor = ColorTween(
     begin: const Color(0x00FFFFFF),
     end: const Color(0x66FFFFFF),
   ).chain(CurveTween(curve: Curves.easeInOut)).animate(_controller);
@@ -118,8 +119,9 @@ class __ItemState extends State<_Item> with SingleTickerProviderStateMixin {
                   builder: (context, child) {
                     return DecoratedBox(
                       decoration: BoxDecoration(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(8)),
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(8),
+                        ),
                         border: Border.fromBorderSide(
                           BorderSide(color: _borderColor.value!),
                         ),

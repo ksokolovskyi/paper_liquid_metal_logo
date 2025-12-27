@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class LiquidMetalLogoState extends ChangeNotifier {
   LiquidMetalLogoState()
-      : _type = LiquidMetalLogoType.flutter,
-        _background = LiquidMetalLogoBackground.metal;
+    : _type = LiquidMetalLogoType.flutter,
+      _background = LiquidMetalLogoBackground.metal;
 
   LiquidMetalLogoType _type;
 

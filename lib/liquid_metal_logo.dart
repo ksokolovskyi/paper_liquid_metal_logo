@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_shaders/flutter_shaders.dart';
 import 'package:paper_liquid_metal_logo/liquid_metal_logo_state.dart';
@@ -167,9 +169,8 @@ class _ImageState extends State<_Image> with SingleTickerProviderStateMixin {
       _nextType = null;
     });
 
-    _controller
-      ..reset()
-      ..forward();
+    _controller.reset();
+    unawaited(_controller.forward());
   }
 
   @override

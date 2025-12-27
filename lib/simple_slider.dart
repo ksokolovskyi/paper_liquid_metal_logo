@@ -61,8 +61,10 @@ class _TrackShape extends SliderTrackShape with BaseSliderTrackShape {
     final trackHeight = sliderTheme.trackHeight!;
     final activePaint = Paint()..color = const Color(0xFF81ADEC);
     final inactivePaint = Paint()..color = const Color(0x33FFFFFF);
-    final (Paint leftTrackPaint, Paint rightTrackPaint) =
-        switch (textDirection) {
+    final (
+      Paint leftTrackPaint,
+      Paint rightTrackPaint,
+    ) = switch (textDirection) {
       TextDirection.ltr => (activePaint, inactivePaint),
       TextDirection.rtl => (inactivePaint, activePaint),
     };
